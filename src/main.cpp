@@ -1159,12 +1159,16 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
     return bnNew.GetCompact();
 }
 
-
-//JUBALIX EDIT TO HERE//
+//
+//END OF BTC CODE FOR RETARGERT ABOVE <---JUBALIX
 
 
 /*---I
-//OLD VERSION
+//OLD VERSION EXISION BEGINS OF TRC CODE FOR RETARGET <---JUBALIX 
+//
+//Note the for the call GetEmaNextWorkRequire, took out the Ema from calls above so it could call this function
+//as GetNextWorkRequire
+//
 // minimum amount of work that could possibly be required nTime after
 // minimum work required was nBase
 //
@@ -1282,7 +1286,7 @@ unsigned int static GetEmaNextWorkRequired(const CBlockIndex* pindexLast, const 
 */
 
 
-
+/*--->here to
 unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
     unsigned int nProofOfWorkLimit = bnProofOfWorkLimit.GetCompact();
@@ -1320,11 +1324,13 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
                 return pindex->nBits;
             }
         }
-        */
-
-        return pindexLast->nBits;
+//      I have taken this out star/<---Jubalix
+/        return pindexLast->nBits;
     }
 
+*/
+
+/*
     // Go back by what we want to be 1 hour worth of blocks:
     int nBlocksLookupRange = nInterval-1;
     if (fTestNet) {
@@ -1373,8 +1379,8 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
     return bnNew.GetCompact();
 }
 
-
-*/
+DONE EXSISED TRC VERSION WHILE DEV ACTUALLY TESTS A NEW VESRION ON A TESTNET OR SOMETHING
+*/ 
 
 bool CheckProofOfWork(uint256 hash, unsigned int nBits)
 {

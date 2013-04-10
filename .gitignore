@@ -1,0 +1,32 @@
+src/*.exe
+src/terracoind
+src/test_terracoin
+.*.swp
+*.*~*
+*.bak
+*.rej
+*.orig
+*.o
+*.patch
+.terracoin
+
+# Compilation and Qt preprocessor part
+*.qm
+Makefile
+terracoin-qt
+
+# Unit-tests
+Makefile.test
+bitcoin-qt_test
+
+# Resources cpp
+qrc_*.cpp
+
+# Qt creator
+*.pro.user
+
+# Mac specific
+.DS_Store
+build
+
+!src/leveldb-*/Makefile
